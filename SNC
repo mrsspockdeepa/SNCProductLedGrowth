@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Project to Product — SNC Corporate Operations | Strategic Case Study</title>
+<meta name="description" content="A strategic case study on transforming Sierra Nevada Corporation's Corporate Operations from a project model to a product operating model.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0A2342; --navy2:#0E3160; --brand:#00539C; --bright:#2E8BD6;
+    --ink:#1B2430; --ink-soft:#47525F; --line:#D6DFE9; --line-soft:#E7EEF5;
+    --paper:#FFFFFF; --mist:#F4F7FB; --tint:#E9F1F9;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--mist);color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1040px;margin:0 auto;background:var(--paper);box-shadow:0 1px 50px rgba(10,35,66,.08);}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--brand);margin:0 0 12px;}
+  .num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--brand);}
+
+  /* hero */
+  header.hero{background:var(--navy);background-image:linear-gradient(160deg,#0A2342 0%,#0E3463 100%);color:#fff;padding:46px 60px 44px;position:relative;overflow:hidden;}
+  header.hero::after{content:"";position:absolute;right:-90px;top:-90px;width:360px;height:360px;background:radial-gradient(circle,rgba(46,139,214,.22),rgba(46,139,214,0) 70%);}
+  .brandrow{display:flex;align-items:center;gap:14px;margin-bottom:34px;position:relative;z-index:1;}
+  .mono{font-family:'Archivo',sans-serif;font-weight:800;font-size:18px;letter-spacing:.05em;border:1.5px solid rgba(255,255,255,.85);padding:5px 11px;border-radius:3px;line-height:1;}
+  .brandrow .org{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#9FC2E6;}
+  .hero .kicker{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--bright);margin:0 0 16px;position:relative;z-index:1;}
+  h1{font-family:'Archivo',sans-serif;font-weight:800;font-size:52px;line-height:1.05;letter-spacing:-.02em;margin:0 0 18px;position:relative;z-index:1;}
+  .hero .sub{font-size:18px;color:#C8D8EA;max-width:60ch;margin:0;position:relative;z-index:1;line-height:1.5;}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:14px 48px;margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);position:relative;z-index:1;}
+  .hero .meta .k{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#7FA6CE;margin-bottom:3px;}
+  .hero .meta .v{font-size:14px;color:#EAF2FB;font-weight:500;}
+
+  main{padding:0 60px;}
+  section{padding:42px 0;border-bottom:1px solid var(--line-soft);}
+  section:last-of-type{border-bottom:none;}
+  h2{font-family:'Archivo',sans-serif;font-weight:700;font-size:27px;line-height:1.15;letter-spacing:-.01em;margin:0 0 18px;color:var(--navy);}
+  h3{font-family:'Archivo',sans-serif;font-weight:600;font-size:17px;margin:0 0 8px;color:var(--ink);}
+  p{margin:0 0 14px;}
+  .lead{font-size:17px;color:var(--ink-soft);max-width:75ch;}
+  strong{color:var(--navy);font-weight:600;}
+
+  /* icon circle */
+  .ic{width:46px;height:46px;border-radius:50%;background:var(--brand);display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .ic.navy{background:var(--navy);}
+  .ic.grey{background:#8A93A0;}
+  .ic svg{width:22px;height:22px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+  .ic.fill svg{fill:#fff;stroke:none;}
+
+  /* card grids */
+  .grid{display:grid;gap:18px;}
+  .g3{grid-template-columns:repeat(3,1fr);}
+  .g2{grid-template-columns:1fr 1fr;}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px 24px;}
+  .card.mist{background:var(--mist);border-color:var(--line-soft);}
+  .card.tint{background:var(--tint);border-color:#D4E4F4;}
+  .card.navy{background:var(--navy);border:none;color:#DCEAF7;}
+  .card.navy h3,.card.navy .h{color:#fff;}
+
+  /* exec cards */
+  .exec .card .t{font-family:'Archivo',sans-serif;font-weight:700;font-size:17px;color:var(--navy);margin:14px 0 6px;}
+  .exec .card p{margin:0;font-size:14px;color:var(--ink-soft);}
+  .reco{margin-top:18px;background:var(--tint);border:1px solid #D4E4F4;border-radius:12px;padding:20px 24px;}
+  .reco .lbl{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brand);font-weight:600;margin-bottom:8px;}
+  .reco p{margin:0;font-size:16.5px;font-weight:600;color:#16314f;}
+
+  /* context */
+  .band{background:var(--navy);color:#fff;border-radius:12px;padding:18px 26px;margin-bottom:8px;}
+  .band .h{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--bright);font-weight:600;margin-bottom:5px;}
+  .band p{margin:0;color:#DCEAF7;font-size:15px;}
+  .layerlbl{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);font-weight:600;margin:18px 0 12px;}
+  .tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
+  .tile{background:var(--mist);border:1px solid var(--line-soft);border-radius:12px;padding:18px 10px;text-align:center;}
+  .tile .ic{margin:0 auto 10px;width:50px;height:50px;}
+  .tile .lab{font-family:'Archivo',sans-serif;font-weight:600;font-size:13px;color:var(--navy);line-height:1.25;}
+
+  /* step flow */
+  .flow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;align-items:stretch;}
+  .step{background:var(--mist);border:1px solid var(--line-soft);border-radius:12px;padding:20px 22px;position:relative;}
+  .step .top{display:flex;align-items:center;gap:14px;margin-bottom:10px;}
+  .step .top .t{font-family:'Archivo',sans-serif;font-weight:700;font-size:18px;color:var(--navy);}
+  .step p{margin:0;font-size:13.5px;color:var(--ink-soft);}
+  .step .ic.amber{background:#B5811F;}
+  .costline{margin-top:20px;font-size:15px;}
+  .costline em{color:var(--brand);font-style:italic;}
+
+  /* table */
+  .tbl{margin-top:6px;border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;}
+  thead th{background:var(--navy);color:#fff;text-align:left;padding:13px 18px;font-family:'Archivo',sans-serif;font-weight:600;font-size:13px;}
+  thead th:first-child{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#9FC2E6;}
+  tbody td{padding:12px 18px;border-top:1px solid var(--line-soft);vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--mist);}
+  tbody td:first-child{font-weight:600;color:var(--navy);width:22%;}
+  tbody td.was{color:var(--ink-soft);}
+  tbody td.now{color:#0c3a63;font-weight:600;}
+
+  /* scoping / split lists */
+  .panel h3{display:flex;align-items:center;gap:12px;font-size:18px;margin-bottom:14px;}
+  .panel ul{margin:0;padding-left:0;list-style:none;}
+  .panel li{position:relative;padding-left:22px;margin-bottom:9px;font-size:14.5px;}
+  .panel li::before{content:"";position:absolute;left:2px;top:8px;width:6px;height:6px;border-radius:1px;transform:rotate(45deg);}
+  .panel.keep li::before{background:#8A93A0;}
+  .panel.prod li::before{background:var(--bright);}
+  .panel.prod li{color:#0c3a63;}
+
+  /* evidence */
+  .ev .name{font-family:'Archivo',sans-serif;font-weight:700;font-size:22px;color:var(--navy);}
+  .ev .tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);font-weight:600;margin:4px 0 12px;}
+  .ev hr{border:none;border-top:1px solid var(--line);margin:0 0 12px;}
+  .ev .stat{font-family:'Archivo',sans-serif;font-weight:700;font-size:25px;color:var(--brand);line-height:1.1;}
+  .ev .slab{font-size:12px;color:var(--ink-soft);margin:2px 0 14px;}
+  .ev p{margin:0;font-size:13.5px;color:var(--ink-soft);}
+
+  /* phases */
+  .phases{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .phase{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px;}
+  .phase.first{background:var(--navy);border:none;color:#C8D8EA;}
+  .phase .pn{width:54px;height:54px;border-radius:50%;background:var(--brand);color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:26px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+  .phase.first .pn{background:var(--bright);}
+  .phase .when{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);font-weight:600;}
+  .phase.first .when{color:var(--bright);}
+  .phase .pt{font-family:'Archivo',sans-serif;font-weight:700;font-size:18px;color:var(--navy);margin:2px 0 10px;}
+  .phase.first .pt{color:#fff;}
+  .phase p{margin:0;font-size:13px;color:var(--ink-soft);}
+  .phase.first p{color:#C8D8EA;}
+  .note{margin-top:18px;font-style:italic;color:var(--brand);font-size:15px;}
+
+  /* pilot before/after */
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .ba .h{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin-bottom:12px;}
+  .ba .now .h{color:var(--ink-soft);}
+  .ba .fut .h{color:var(--bright);}
+  .ba ul{margin:0;padding-left:0;list-style:none;}
+  .ba li{position:relative;padding-left:20px;margin-bottom:9px;font-size:14px;}
+  .ba li::before{content:"";position:absolute;left:2px;top:8px;width:5px;height:5px;border-radius:1px;transform:rotate(45deg);}
+  .ba .now li::before{background:#8A93A0;}
+  .ba .fut li{color:#DCEAF7;}
+  .ba .fut li::before{background:var(--bright);}
+
+  /* defense + metrics reuse cards */
+  .defcard h3{margin:14px 0 8px;}
+  .defcard p{margin:0;font-size:14px;color:var(--ink-soft);}
+  .metrics .h{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin-bottom:12px;}
+  .metrics .tint .h{color:var(--brand);}
+  .metrics .mist .h{color:#6A7686;}
+  .metrics ul{margin:0;padding-left:0;list-style:none;}
+  .metrics li{position:relative;padding-left:22px;margin-bottom:9px;font-size:14.5px;}
+  .metrics li::before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:1px;transform:rotate(45deg);background:var(--bright);}
+  .metrics .tint li{color:#0c3a63;}
+  .avoid{margin-top:18px;font-size:14.5px;}
+  .avoid em{font-style:italic;color:var(--ink-soft);}
+
+  /* recommendation 90 days */
+  .days{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .day{background:var(--mist);border:1px solid var(--line-soft);border-radius:12px;padding:18px 20px;}
+  .day .top{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
+  .day .top .t{font-family:'Archivo',sans-serif;font-weight:700;font-size:15.5px;color:var(--navy);}
+  .day p{margin:0;font-size:13px;color:var(--ink-soft);}
+  .day .ic{width:40px;height:40px;}.day .ic svg{width:18px;height:18px;}
+
+  /* close */
+  .close{background:var(--navy);background-image:linear-gradient(160deg,#0A2342,#0E3463);color:#fff;border-radius:0;padding:46px 60px;margin:0 -60px -0px;position:relative;overflow:hidden;}
+  .close::before{content:"";position:absolute;left:-120px;bottom:-120px;width:360px;height:360px;background:radial-gradient(circle,rgba(46,139,214,.18),rgba(46,139,214,0) 70%);}
+  .close .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--bright);margin-bottom:14px;position:relative;z-index:1;}
+  .close h2{color:#fff;font-size:30px;max-width:24ch;position:relative;z-index:1;}
+  .close .sums{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:26px 0 28px;position:relative;z-index:1;}
+  .close .sum{display:flex;gap:14px;align-items:flex-start;}
+  .close .sum .t{font-family:'Archivo',sans-serif;font-weight:700;font-size:16px;color:#fff;}
+  .close .sum p{margin:2px 0 0;font-size:13px;color:#9FC2E6;}
+  .close .next{border-top:1px solid rgba(255,255,255,.14);padding-top:20px;position:relative;z-index:1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;}
+  .close .next .step{font-size:15px;font-weight:600;color:#fff;background:none;border:none;padding:0;}
+  .close .next .by{font-size:13px;color:#9FC2E6;}
+
+  footer{padding:22px 60px 30px;background:var(--navy);color:#7FA6CE;font-size:12.5px;}
+
+  @media (max-width:820px){
+    header.hero,main,.close,footer{padding-left:26px;padding-right:26px;}
+    main{padding-top:0;padding-bottom:0;}
+    .close{margin-left:-26px;margin-right:-26px;padding-left:26px;padding-right:26px;}
+    h1{font-size:34px;}
+    .g3,.g2,.flow,.tiles,.phases,.ba,.days,.close .sums,.metrics .g2{grid-template-columns:1fr;}
+    .tiles{grid-template-columns:1fr 1fr;}
+    .hero .meta div{border:none;padding-right:0;margin-right:0;margin-bottom:10px;}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+  @media print{body{background:#fff;}.wrap{box-shadow:none;}section{page-break-inside:avoid;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="brandrow"><span class="mono">SNC</span><span class="org">Sierra Nevada Corporation &middot; Corporate Operations</span></div>
+    <p class="kicker">Strategic Case Study</p>
+    <h1>From Project to Product</h1>
+    <p class="sub">Transforming the delivery of Corporate Operations capabilities, without disrupting the program model that wins and executes contracts.</p>
+    <div class="meta">
+      <div><div class="k">Subject</div><div class="v">Corporate Operations</div></div>
+      <div><div class="k">Type</div><div class="v">Transformation roadmap &amp; recommendation</div></div>
+      <div><div class="k">Prepared by</div><div class="v">Jennifer &middot; June 2026</div></div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 01 EXEC SUMMARY -->
+    <section class="exec">
+      <p class="eyebrow"><span class="num">01</span> &nbsp;Executive Summary</p>
+      <h2>The opportunity in brief</h2>
+      <p class="lead">SNC competes on agility and speed of execution. Program delivery is rightly contract-based and is not the subject of this transformation. The internal capabilities every program depends on, however, are still delivered as one-off projects, which produces rework, orphaned tooling, and avoidable drag. Running these as durable products would protect SNC's speed advantage as it scales.</p>
+      <div class="grid g3" style="margin-top:22px;">
+        <div class="card mist">
+          <span class="ic fill"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z" fill="none" stroke="#fff" stroke-width="2"/><path d="M9 12h7M9 16h7M9 8h3" stroke="#fff" stroke-width="2"/></svg></span>
+          <div class="t">Programs stay program-based</div>
+          <p>Contract delivery under cost-plus, FFP, and IDIQ is left intact.</p>
+        </div>
+        <div class="card mist">
+          <span class="ic fill"><svg viewBox="0 0 24 24"><rect x="4" y="13" width="7" height="7" rx="1" fill="#fff"/><rect x="13" y="13" width="7" height="7" rx="1" fill="#fff"/><rect x="8.5" y="4" width="7" height="7" rx="1" fill="#fff"/></svg></span>
+          <div class="t">Operations become product-led</div>
+          <p>Durable teams, persistent funding, and outcome ownership.</p>
+        </div>
+        <div class="card mist">
+          <span class="ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H14a3 3 0 0 0 3-3V8.5"/></svg></span>
+          <div class="t">Pilot first, then scale</div>
+          <p>Two or three bright spots prove the model at low risk.</p>
+        </div>
+      </div>
+      <div class="reco">
+        <div class="lbl">Recommendation</div>
+        <p>Charter a pilot-led product operating model in Corporate Operations, designed for defense cost-accounting from day one, and prove it on two or three high-pain capabilities before scaling.</p>
+      </div>
+    </section>
+
+    <!-- 02 CONTEXT -->
+    <section>
+      <p class="eyebrow"><span class="num">02</span> &nbsp;Context</p>
+      <h2>Corporate Operations is the enabling layer</h2>
+      <p class="lead">Programs win and execute on contract terms. Underneath them sits a shared layer of internal capabilities that every program draws on. Today that layer is funded project by project, so it ages between investments. As SNC scales and self-funds bets ahead of contracts, this layer increasingly sets the pace of execution.</p>
+      <div class="band" style="margin-top:22px;">
+        <div class="h">Program Delivery</div>
+        <p>Contract-based: cost-plus, FFP, IDIQ. &nbsp;Not the subject of this transformation.</p>
+      </div>
+      <div class="layerlbl">Corporate Operations &middot; The Enabling Layer</div>
+      <div class="tiles">
+        <div class="tile"><span class="ic navy fill"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3" fill="#fff"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6" fill="none" stroke="#fff" stroke-width="2"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3" fill="none" stroke="#fff" stroke-width="2"/></svg></span><div class="lab">Data &amp;<br>Analytics</div></div>
+        <div class="tile"><span class="ic navy"><svg viewBox="0 0 24 24"><polyline points="9 9 6 12 9 15"/><polyline points="15 9 18 12 15 15"/></svg></span><div class="lab">DevSecOps<br>Tooling</div></div>
+        <div class="tile"><span class="ic navy fill"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3" fill="#fff"/><circle cx="16" cy="9" r="3" fill="#fff"/><path d="M3 19c0-3 2.5-5 5-5s5 2 5 5M13 19c0-3 2.5-5 5-5s5 2 5 5" fill="none" stroke="#fff" stroke-width="2"/></svg></span><div class="lab">Employee &amp;<br>HR Experience</div></div>
+        <div class="tile"><span class="ic navy fill"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="6" rx="1" fill="#fff"/><rect x="3" y="15" width="6" height="6" rx="1" fill="#fff"/><rect x="15" y="15" width="6" height="6" rx="1" fill="#fff"/><path d="M12 9v3M12 12H6v3M12 12h6v3" fill="none" stroke="#fff" stroke-width="2"/></svg></span><div class="lab">Supply Chain<br>&amp; Procurement</div></div>
+        <div class="tile"><span class="ic navy fill"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z" fill="#fff"/></svg></span><div class="lab">Security &amp;<br>Compliance</div></div>
+      </div>
+    </section>
+
+    <!-- 03 CHALLENGE -->
+    <section>
+      <p class="eyebrow"><span class="num">03</span> &nbsp;The Challenge</p>
+      <h2>Capabilities are built, then orphaned</h2>
+      <p class="lead">Project funding optimizes for a closed scope, not a living capability. Success is measured by milestones met and projects closed, not by the value delivered to the internal customer.</p>
+      <div class="flow" style="margin-top:22px;">
+        <div class="step"><div class="top"><span class="ic navy fill"><svg viewBox="0 0 24 24"><path d="M12 3c-3 0-5 1-5 3v0c0 1 1 2 5 2s5-1 5-2c0-2-2-3-5-3z" fill="#fff"/><path d="M7 6v9c0 2 2 3 5 3s5-1 5-3V6" fill="none" stroke="#fff" stroke-width="2"/><text x="12" y="15" font-size="7" fill="#0A2342" text-anchor="middle" font-family="Arial" font-weight="bold">$</text></svg></span><span class="t">Funded</span></div><p>A project is approved with a fixed scope and budget.</p></div>
+        <div class="step"><div class="top"><span class="ic navy"><svg viewBox="0 0 24 24"><path d="M14 7l3 3-7 7-3 1 1-3z"/><path d="M16 5l2-2 3 3-2 2z"/></svg></span><span class="t">Delivered</span></div><p>The capability ships and the team disbands.</p></div>
+        <div class="step"><div class="top"><span class="ic amber fill"><svg viewBox="0 0 24 24"><path d="M6 21V9a6 6 0 0 1 12 0v12l-2-1.5L14 21l-2-1.5L10 21l-2-1.5z" fill="#fff"/><circle cx="9.5" cy="10" r="1.1" fill="#B5811F"/><circle cx="14.5" cy="10" r="1.1" fill="#B5811F"/></svg></span><span class="t">Orphaned</span></div><p>No one owns its future. It ages until re-funded.</p></div>
+      </div>
+      <p class="costline"><strong>The cost:</strong> rework, shadow IT, stale tooling, low adoption, and program teams quietly rebuilding what already exists.</p>
+      <p class="costline"><em>For an organization that competes on speed, this is a tax on its core advantage.</em></p>
+    </section>
+
+    <!-- 04 THE SHIFT -->
+    <section>
+      <p class="eyebrow"><span class="num">04</span> &nbsp;The Shift</p>
+      <h2>From project delivery to product ownership</h2>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Dimension</th><th>Project mode (today)</th><th>Product mode (target)</th></tr></thead>
+          <tbody>
+            <tr><td>Unit of work</td><td class="was">Temporary initiative, start and end</td><td class="now">Durable capability that evolves</td></tr>
+            <tr><td>Funding</td><td class="was">Annual project budget; fund the work</td><td class="now">Persistent funding; fund the outcome</td></tr>
+            <tr><td>Team</td><td class="was">Assembled, then disbanded</td><td class="now">Stable, empowered, cross-functional</td></tr>
+            <tr><td>Team receives</td><td class="was">Requirements and scope</td><td class="now">Problems and outcomes to solve</td></tr>
+            <tr><td>Success metric</td><td class="was">On time, on budget, milestones</td><td class="now">Adoption, cycle time, business outcome</td></tr>
+            <tr><td>End state</td><td class="was">Project closes</td><td class="now">Product evolves, then sunset on purpose</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 05 SCOPING -->
+    <section>
+      <p class="eyebrow"><span class="num">05</span> &nbsp;Scoping</p>
+      <h2>What becomes a product, and what stays a project</h2>
+      <p class="lead">Not everything should become a product. In a defense prime, a large share of work is genuinely better run as a project. Discipline here is what keeps the model credible.</p>
+      <div class="grid g2" style="margin-top:22px;">
+        <div class="card mist panel keep">
+          <h3><span class="ic grey fill"><svg viewBox="0 0 24 24"><path d="M5 3v18M5 4h11l-2 3 2 3H5" fill="#fff"/></svg></span>Stays a project</h3>
+          <ul>
+            <li>One-time compliance remediations (a CMMC push, a discrete audit)</li>
+            <li>Facility builds, MRO standups, M&amp;A integrations</li>
+            <li>Discrete migrations with fixed, known scope</li>
+            <li>The transformation itself, run as a program</li>
+          </ul>
+        </div>
+        <div class="card tint panel prod">
+          <h3><span class="ic fill"><svg viewBox="0 0 24 24"><rect x="4" y="13" width="7" height="7" rx="1" fill="#fff"/><rect x="13" y="13" width="7" height="7" rx="1" fill="#fff"/><rect x="8.5" y="4" width="7" height="7" rx="1" fill="#fff"/></svg></span>Becomes a product</h3>
+          <ul>
+            <li>Enterprise data &amp; program-insights platform</li>
+            <li>Engineering &amp; DevSecOps tooling / software factory</li>
+            <li>Employee &amp; HR digital experience</li>
+            <li>Supply chain &amp; procurement systems</li>
+            <li>Internal AI &amp; copilot capabilities for operations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 INDUSTRY EVIDENCE -->
+    <section class="ev">
+      <p class="eyebrow"><span class="num">06</span> &nbsp;Industry Evidence</p>
+      <h2>Proven in regulated, complex institutions</h2>
+      <div class="grid g3" style="margin-top:22px;">
+        <div class="card">
+          <div class="name">ING</div><div class="tag">Regulated banking</div><hr>
+          <div class="stat">9 mo to continuous</div><div class="slab">IT delivery cycle</div>
+          <p>Reorganized ~3,500 HQ staff into product-aligned squads and tribes. Releases moved from 5&ndash;6 a year to every 2&ndash;3 weeks; one platform's NPS rose from -30 to +30 in a year.</p>
+        </div>
+        <div class="card">
+          <div class="name">Vanguard</div><div class="tag">Financial services</div><hr>
+          <div class="stat">~75%</div><div class="slab">fewer major incidents</div>
+          <p>Began with a ~10-team pilot, proved the model, then scaled. A bright-spots-first rollout, with technical change accelerating roughly fivefold.</p>
+        </div>
+        <div class="card">
+          <div class="name">Adobe</div><div class="tag">Software</div><hr>
+          <div class="stat">$4.4B to $15B+</div><div class="slab">revenue after the shift</div>
+          <p>Moved from shipping perpetual licenses to running Creative Cloud as one continuously evolving product. Market cap up ~5x; 30M+ subscribers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 APPROACH -->
+    <section>
+      <p class="eyebrow"><span class="num">07</span> &nbsp;Approach</p>
+      <h2>A phased, pilot-led rollout</h2>
+      <div class="phases" style="margin-top:22px;">
+        <div class="phase first"><div class="pn">0</div><div class="when">0&ndash;90 days</div><div class="pt">Diagnose</div><p>Value-stream map Corporate Operations. Select 2&ndash;3 pilot products with high pain, a clear customer, and a willing sponsor. Baseline the metrics.</p></div>
+        <div class="phase"><div class="pn">1</div><div class="when">Q1&ndash;Q2</div><div class="pt">Prove</div><p>Stand up pilot teams with persistent funding. Install continuous discovery and outcome metrics. Deliver one visible win.</p></div>
+        <div class="phase"><div class="pn">2</div><div class="when">Q3&ndash;Q4</div><div class="pt">Codify</div><p>Write a lightweight operating-model playbook. Expand to the next wave. Build internal product-management capability.</p></div>
+        <div class="phase"><div class="pn">3</div><div class="when">Year 2+</div><div class="pt">Scale</div><p>Integrate with lean portfolio management and OKRs. Shift budgeting toward persistent funding. Retire the feature factory.</p></div>
+      </div>
+      <p class="note">Bright spots first. Big-bang reorganizations exhaust the organization and deliver little.</p>
+    </section>
+
+    <!-- 08 PILOT -->
+    <section>
+      <p class="eyebrow"><span class="num">08</span> &nbsp;Illustrative Pilot</p>
+      <h2>Enterprise Program-Insights Platform</h2>
+      <p class="lead">The tooling and data programs use to plan, track, forecast, and report status. A representative first pilot: high pain, a clear internal customer, and measurable outcomes.</p>
+      <div class="ba" style="margin-top:22px;">
+        <div class="card mist now">
+          <div class="h">Today &middot; Project mode</div>
+          <ul>
+            <li>Each program funds its own dashboards as a project</li>
+            <li>Tools get built, then go stale</li>
+            <li>Data siloed by program; reporting is manual</li>
+            <li>Forecast accuracy varies by who built the sheet</li>
+          </ul>
+        </div>
+        <div class="card navy fut">
+          <div class="h">Future &middot; Product mode</div>
+          <ul>
+            <li>A durable team with persistent funding owns it</li>
+            <li>Customers: program managers and executives</li>
+            <li>Weekly discovery; a single source of truth</li>
+            <li>Outcome: faster status, better forecast accuracy</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note" style="font-style:italic;color:var(--ink-soft);">Alternative pilots: the DevSecOps software factory as an internal product; the employee and HR digital experience.</p>
+    </section>
+
+    <!-- 09 DEFENSE -->
+    <section>
+      <p class="eyebrow"><span class="num">09</span> &nbsp;Defense-Sector Considerations</p>
+      <h2>Designed for govcon reality</h2>
+      <p class="lead">A product model in a defense prime differs from one at a consumer technology company. These constraints are designed in from the start, not bolted on later.</p>
+      <div class="grid g3" style="margin-top:22px;">
+        <div class="card mist defcard"><span class="ic fill"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="13" height="9" rx="1.5" fill="#fff"/><circle cx="8.5" cy="10.5" r="2" fill="#00539C"/><path d="M18 9l4 0M22 9l-2-2M22 9l-2 2M6 18l-4 0M2 18l2-2M2 18l2 2" stroke="#fff" stroke-width="2" fill="none"/></svg></span><h3>Cost accounting</h3><p>Persistent funding still maps to allowable cost pools and charge numbers. The model includes a DCAA-compliant funding design.</p></div>
+        <div class="card mist defcard"><span class="ic fill"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2" fill="#fff"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="#fff" stroke-width="2"/></svg></span><h3>ITAR &amp; export control</h3><p>Export-controlled work and clearance boundaries shape team composition. This is built into the team topology.</p></div>
+        <div class="card mist defcard"><span class="ic fill"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="#fff"/><path d="M9 14l-2 7 5-3 5 3-2-7" fill="#fff"/></svg></span><h3>ATO &amp; continuous ATO</h3><p>Authorization-to-operate gates are real. Security and compliance are treated as a product capability, not an afterthought.</p></div>
+      </div>
+    </section>
+
+    <!-- 10 METRICS -->
+    <section class="metrics">
+      <p class="eyebrow"><span class="num">10</span> &nbsp;Measuring Success</p>
+      <h2>Outcomes over output</h2>
+      <div class="grid g2" style="margin-top:22px;">
+        <div class="card tint">
+          <div class="h">Leading indicators</div>
+          <ul>
+            <li>Discovery cadence: weekly contact with users</li>
+            <li>Flow / cycle time</li>
+            <li>Share of work tied to a stated outcome</li>
+            <li>Team stability</li>
+          </ul>
+        </div>
+        <div class="card mist">
+          <div class="h">Lagging indicators</div>
+          <ul>
+            <li>Internal adoption</li>
+            <li>Internal NPS / CSAT</li>
+            <li>Business outcome per product</li>
+            <li>Fewer orphaned tools and less shadow IT</li>
+          </ul>
+        </div>
+      </div>
+      <p class="avoid"><strong>Avoid:</strong> <em>velocity and story points as success measures. Output velocity restates the build trap in metric form.</em></p>
+    </section>
+
+    <!-- 11 RECOMMENDATION / 90 DAYS -->
+    <section>
+      <p class="eyebrow"><span class="num">11</span> &nbsp;Recommendation</p>
+      <h2>First 90 days</h2>
+      <p class="lead">Charter a pilot-led product operating model in Corporate Operations. The first quarter establishes scope, funding, and a visible win.</p>
+      <div class="days" style="margin-top:22px;">
+        <div class="day"><div class="top"><span class="ic navy"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></span><span class="t">Listen &amp; map</span></div><p>A listening tour and a value-stream map of Corporate Operations.</p></div>
+        <div class="day"><div class="top"><span class="ic navy"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.6" fill="#fff"/></svg></span><span class="t">Select pilots</span></div><p>Identify 2&ndash;3 pilot candidates and secure an executive sponsor for each.</p></div>
+        <div class="day"><div class="top"><span class="ic navy"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M7 15l4-4 3 3 5-6"/></svg></span><span class="t">Baseline</span></div><p>Define target outcomes and baseline the current metrics.</p></div>
+        <div class="day"><div class="top"><span class="ic navy fill"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3" fill="#fff"/><circle cx="16" cy="9" r="3" fill="#fff"/><path d="M3 19c0-3 2.5-5 5-5s5 2 5 5M13 19c0-3 2.5-5 5-5s5 2 5 5" fill="none" stroke="#fff" stroke-width="2"/></svg></span><span class="t">Stand up a team</span></div><p>Form the first product trio and install a weekly discovery rhythm.</p></div>
+        <div class="day"><div class="top"><span class="ic navy fill"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z" fill="none" stroke="#fff" stroke-width="2"/><path d="M9 12h7M9 16h7" stroke="#fff" stroke-width="2"/></svg></span><span class="t">Align funding</span></div><p>Socialize a one-page vision; secure persistent, charge-code-compatible funding.</p></div>
+        <div class="day"><div class="top"><span class="ic navy fill"><svg viewBox="0 0 24 24"><path d="M7 4h10v4a5 5 0 0 1-10 0zM5 4h2v3a2 2 0 0 1-2-2zM19 4h-2v3a2 2 0 0 0 2-2zM10 14h4v3h-4zM8 21h8v-2H8z" fill="#fff"/></svg></span><span class="t">Deliver a win</span></div><p>Land one quick, visible win in the first quarter to build the coalition.</p></div>
+      </div>
+    </section>
+
+    <!-- CLOSE -->
+    <section style="border:none;padding-bottom:0;">
+      <div class="close">
+        <div class="kicker">Recommendation</div>
+        <h2>Keep programs program-based. Make Corporate Operations product-led.</h2>
+        <div class="sums">
+          <div class="sum"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H14a3 3 0 0 0 3-3V8.5"/></svg></span><div><div class="t">Start small</div><p>Two or three pilot products, proven before scaling.</p></div></div>
+          <div class="sum"><span class="ic fill"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z" fill="#fff"/></svg></span><div><div class="t">Built for govcon</div><p>Funding that satisfies DCAA, ITAR, and ATO.</p></div></div>
+          <div class="sum"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0"/><path d="M12 13l4-3"/><circle cx="12" cy="13" r="1.4" fill="#fff" stroke="none"/></svg></span><div><div class="t">Measured on outcomes</div><p>Adoption and impact, never velocity.</p></div></div>
+        </div>
+        <div class="next">
+          <span class="step">Recommended next step: charter a 2&ndash;3 product pilot in Corporate Operations.</span>
+          <span class="by">Prepared by Jennifer</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Frameworks referenced: product operating model (Cagan), continuous discovery (Torres), Project to Product and flow funding (Kersten), the build trap (Perri), stream-aligned teams (Team Topologies).
+  </footer>
+
+</div>
+</body>
+</html>
